@@ -59,6 +59,10 @@ public class Trade {
         } else throw new TradePriceException("Price cannot be negative");
     }
 
+    public double getProduct() {
+        return this.price * this.quantity;
+    }
+
     @Override
     public String toString() {
         return "Trade{" +

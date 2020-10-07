@@ -29,4 +29,10 @@ public class AccountTest {
         trader.addTrade(trade2);
     }
 
+    @Test
+    public void tradeProductIsAccurate() throws TradePriceException {
+        Trade trade = new Trade("T1", "APPL", 100, 5);
+        assertEquals(trade.getProduct(), 500);
+    }
+
 }
